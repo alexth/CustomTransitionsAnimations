@@ -18,8 +18,12 @@ DerivedData/
 xcuserdata/
 
 ## Other
+*.xccheckout
 *.moved-aside
 *.xcuserstate
+*.xcscmblueprint
+.DS_Store
+.ruby-version
 
 ## Obj-C/Swift specific
 *.hmap

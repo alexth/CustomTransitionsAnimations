@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTransitionsAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CustomTransitionsAnimations" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="1121" y="429"/>
         </scene>
-        <!--Hello-->
+        <!--Destination View Controller-->
         <scene sceneID="9FG-v0-Sot">
             <objects>
-                <viewController id="7sj-iB-O7V" customClass="DestinationViewController" sceneMemberID="viewController">
+                <viewController id="7sj-iB-O7V" customClass="DestinationViewController" customModule="CustomTransitionsAnimations" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HbR-dr-H78"/>
                         <viewControllerLayoutGuide type="bottom" id="PBR-kf-Zyq"/>
@@ -64,15 +64,8 @@
                     <view key="view" contentMode="scaleToFill" id="Vee-Gf-DFz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.23921568630000001" green="0.80392156859999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello" id="eX7-rQ-r14">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="IYU-AI-1Do">
-                            <connections>
-                                <action selector="backButtonDidPressed:" destination="7sj-iB-O7V" id="4Rb-xU-jQh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfH-w9-JZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

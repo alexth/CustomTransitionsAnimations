@@ -8,9 +8,4 @@
 
 import UIKit
 
-class DestinationViewController: UIViewController {
-
-    @IBAction func backButtonDidPressed(button: UIButton) {
-
-    }
-}
+class DestinationViewController: UIViewController {}
