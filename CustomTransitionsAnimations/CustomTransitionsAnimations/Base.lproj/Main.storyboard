@@ -17,15 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAW-mX-bQR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-rL-fw9">
+                                        <rect key="frame" x="510" y="20" width="80" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="G5J-uK-kxh"/>
+                                            <constraint firstAttribute="height" constant="44" id="sYc-4w-lAs"/>
+                                        </constraints>
+                                        <state key="normal" title="Top Menu">
+                                            <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="animateTopBar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ne9-uq-loB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.39607843139999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Xh3-rL-fw9" firstAttribute="centerY" secondItem="BAW-mX-bQR" secondAttribute="centerY" constant="10" id="APM-CM-N11"/>
+                                    <constraint firstAttribute="width" constant="600" id="OX3-vC-TUK"/>
+                                    <constraint firstAttribute="height" constant="64" id="u9j-jr-MIz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xh3-rL-fw9" secondAttribute="trailing" constant="10" id="znm-2B-iUJ"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ov5-k3-C27">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" id="1Yz-6x-Hj2">
-                                        <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" rowHeight="60" id="1Yz-6x-Hj2">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Yz-6x-Hj2" id="JBn-Oh-njG">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -38,15 +63,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ov5-k3-C27" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SEE-kM-eeq"/>
+                            <constraint firstAttribute="trailing" secondItem="BAW-mX-bQR" secondAttribute="trailing" id="4Jv-25-5c8"/>
+                            <constraint firstItem="Ov5-k3-C27" firstAttribute="top" secondItem="BAW-mX-bQR" secondAttribute="bottom" id="G59-dX-W2m"/>
+                            <constraint firstItem="BAW-mX-bQR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IbZ-0s-ANO"/>
                             <constraint firstAttribute="trailing" secondItem="Ov5-k3-C27" secondAttribute="trailing" id="bwf-ga-qsr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ov5-k3-C27" secondAttribute="bottom" id="cj9-pv-uyU"/>
+                            <constraint firstItem="BAW-mX-bQR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gKT-iY-ORu"/>
+                            <constraint firstItem="BAW-mX-bQR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vXQ-pL-eeG"/>
                             <constraint firstItem="Ov5-k3-C27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yKr-P3-q6a"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vXQ-pL-eeG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="MNs-aS-XX2"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="topBarHeightConstraint" destination="u9j-jr-MIz" id="sc4-aw-FUf"/>
                         <segue destination="7sj-iB-O7V" kind="show" identifier="appearSegue" customClass="AppearSegue" customModule="CustomTransitionsAnimations" customModuleProvider="target" id="c10-1R-uSg"/>
+                        <segue destination="SHq-Vd-BQs" kind="presentation" identifier="popAnimatorSegue" id="sVS-NW-Io2"/>
+                        <segue destination="SHq-Vd-BQs" kind="presentation" identifier="expandAnimatorSegue" id="udr-0h-MXw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,12 +102,65 @@
                     <view key="view" contentMode="scaleToFill" id="Vee-Gf-DFz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGQ-Si-uRq">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="OuA-FF-pFl"/>
+                                    <constraint firstAttribute="height" constant="100" id="xqu-x1-3Ul"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="userDidPressedBack:" destination="7sj-iB-O7V" eventType="touchUpInside" id="P7q-Zl-b0L"/>
+                                    <action selector="userDidPressedBack:" destination="SHq-Vd-BQs" eventType="touchUpInside" id="Yqj-Q1-jKQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.80392156859999997" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fGQ-Si-uRq" firstAttribute="centerY" secondItem="Vee-Gf-DFz" secondAttribute="centerY" id="TaR-yb-WCd"/>
+                            <constraint firstItem="fGQ-Si-uRq" firstAttribute="centerX" secondItem="Vee-Gf-DFz" secondAttribute="centerX" id="en4-cd-AGI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfH-w9-JZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805" y="429"/>
+        </scene>
+        <!--Destination View Controller-->
+        <scene sceneID="uPa-Xt-5cj">
+            <objects>
+                <viewController id="SHq-Vd-BQs" customClass="DestinationViewController" customModule="CustomTransitionsAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lx9-bF-Z0M"/>
+                        <viewControllerLayoutGuide type="bottom" id="tKW-vC-wcV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TIq-py-HGg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20d-QZ-4Lx">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LEH-g9-K7c"/>
+                                    <constraint firstAttribute="width" constant="100" id="g3E-wb-8o7"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="userDidPressedBack:" destination="SHq-Vd-BQs" eventType="touchUpInside" id="aEQ-n6-F2z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="20d-QZ-4Lx" firstAttribute="centerY" secondItem="TIq-py-HGg" secondAttribute="centerY" id="hQp-iF-BlA"/>
+                            <constraint firstItem="20d-QZ-4Lx" firstAttribute="centerX" secondItem="TIq-py-HGg" secondAttribute="centerX" id="n58-Sd-5W4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ppr-yl-dwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805" y="1204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EfV-Kg-Hm1">
@@ -90,4 +181,10 @@
             <point key="canvasLocation" x="353" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backButton" width="64" height="64"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="udr-0h-MXw"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,4 +1,4 @@
-//
+
 //  AppearSegue.swift
 //  CustomTransitionsAnimations
 //
@@ -11,7 +11,6 @@ import UIKit
 class AppearSegue: UIStoryboardSegue {
     override func perform() {
         let sourceVC = self.sourceViewController
-        let sourceVCNC = sourceVC.navigationController
         let destinationVC = self.destinationViewController
 
         sourceVC.view.addSubview(destinationVC.view)
@@ -23,8 +22,10 @@ class AppearSegue: UIStoryboardSegue {
                 destinationVC.view.removeFromSuperview()
                 let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.001 * Double(NSEC_PER_SEC)))
                     dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                        sourceVCNC?.viewControllers.append(destinationVC)
-//                        sourceVC.presentViewController(destinationVC, animated: false, completion: nil)
+                        sourceVC.presentViewController(destinationVC, animated: false, completion: nil)
+//                        if let sourceVCNC = sourceVC.navigationController {
+//                            sourceVCNC.viewControllers.append(destinationVC)
+//                        }
                     })
         }
     }

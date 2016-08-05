@@ -8,4 +8,18 @@
 
 import UIKit
 
-class DestinationViewController: UIViewController {}
+class DestinationViewController: UIViewController {
+
+    // MARK: View lifecycle
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.hidden = false
+    }
+
+    // MARK: Actions
+
+    @IBAction func userDidPressedBack(button: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+}

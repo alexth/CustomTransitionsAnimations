@@ -10,6 +10,8 @@
 		E54FF0301D531FE8008E22D7 /* AppearSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FF02F1D531FE8008E22D7 /* AppearSegue.swift */; };
 		E54FF0361D5323E1008E22D7 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FF0341D5323E1008E22D7 /* DestinationViewController.swift */; };
 		E54FF0371D5323E1008E22D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54FF0351D5323E1008E22D7 /* ViewController.swift */; };
+		E57E232E1D5519FE00689498 /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E232D1D5519FE00689498 /* PopAnimator.swift */; };
+		E57E23301D55303800689498 /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E232F1D55303800689498 /* ExpandAnimator.swift */; };
 		E5FB5A671D5281F300171B58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FB5A661D5281F300171B58 /* AppDelegate.swift */; };
 		E5FB5A6C1D5281F300171B58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FB5A6A1D5281F300171B58 /* Main.storyboard */; };
 		E5FB5A6E1D5281F300171B58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5FB5A6D1D5281F300171B58 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		E54FF02F1D531FE8008E22D7 /* AppearSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearSegue.swift; sourceTree = "<group>"; };
 		E54FF0341D5323E1008E22D7 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		E54FF0351D5323E1008E22D7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E57E232D1D5519FE00689498 /* PopAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		E57E232F1D55303800689498 /* ExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
 		E5FB5A631D5281F300171B58 /* CustomTransitionsAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransitionsAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FB5A661D5281F300171B58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5FB5A6B1D5281F300171B58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 			path = VIewControllers;
 			sourceTree = "<group>";
 		};
+		E57E232C1D5519BA00689498 /* TransitionAnimators */ = {
+			isa = PBXGroup;
+			children = (
+				E57E232F1D55303800689498 /* ExpandAnimator.swift */,
+				E57E232D1D5519FE00689498 /* PopAnimator.swift */,
+			);
+			path = TransitionAnimators;
+			sourceTree = "<group>";
+		};
 		E5FB5A5A1D5281F300171B58 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +132,10 @@
 		E5FB5A651D5281F300171B58 /* CustomTransitionsAnimations */ = {
 			isa = PBXGroup;
 			children = (
-				E54FF0311D532374008E22D7 /* ViewControllers */,
 				E5FB5A661D5281F300171B58 /* AppDelegate.swift */,
 				E54FF02C1D531CEF008E22D7 /* CustomSegues */,
+				E54FF0311D532374008E22D7 /* ViewControllers */,
+				E57E232C1D5519BA00689498 /* TransitionAnimators */,
 				E5FB5A6A1D5281F300171B58 /* Main.storyboard */,
 				E5FB5A6D1D5281F300171B58 /* Assets.xcassets */,
 				E5FB5A6F1D5281F300171B58 /* LaunchScreen.storyboard */,
@@ -281,8 +295,10 @@
 			files = (
 				E5FB5A671D5281F300171B58 /* AppDelegate.swift in Sources */,
 				E54FF0361D5323E1008E22D7 /* DestinationViewController.swift in Sources */,
+				E57E23301D55303800689498 /* ExpandAnimator.swift in Sources */,
 				E54FF0371D5323E1008E22D7 /* ViewController.swift in Sources */,
 				E54FF0301D531FE8008E22D7 /* AppearSegue.swift in Sources */,
+				E57E232E1D5519FE00689498 /* PopAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
